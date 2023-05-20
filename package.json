@@ -5,7 +5,7 @@
   "private": "true",
   "scripts": {
     "build": "tsc",
-    "start": "node src/index.js",
+    "start": "node dist/index.js",
     "test": "ava"
   },
   "repository": {
