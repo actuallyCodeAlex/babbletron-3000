@@ -1,11 +1,11 @@
 {
-  "name": "babbletron-3000",
+  "name": "my-webpack-project",
   "version": "1.0.0",
-  "description": "1 tool for creating and managing the babble of work.",
-  "main": "build/index.js",
+  "description": "My webpack project",
+  "private": "true",
   "scripts": {
-    "prestart": "tsc && echo RUNNING BABBELTRON-3000",
-    "start": "node dist/index.js",
+    "build": "tsc",
+    "start": "node build/index.js",
     "test": "ava"
   },
   "repository": {
