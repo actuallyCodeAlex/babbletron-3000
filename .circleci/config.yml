@@ -17,7 +17,10 @@ jobs:
       - node/install:
           install-yarn: false
           node-version: '16.13'
-      - run: node --version
+      - run: node --version && npm --version
+      - run:
+          name: "Install dependencies"
+          command: "npm install"
       - run:
           name: "Run Ava"
           command: "npm test"
