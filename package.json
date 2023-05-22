@@ -8,9 +8,7 @@
     "build": "npm run clean && tsc && npm run copy-files",
     "clean": "rimraf ./dist",
     "copy-files": "copyfiles -u 1 public/**/* dist/",
-    "copy-files-2": "copyfiles -u 1 src/**/*.html src/**/*.css dist/",
     "start": "electron .",
-    "start-2": "node dist/index.js",
     "test": "ava"
   },
   "repository": {
@@ -25,7 +23,7 @@
   "homepage": "https://github.com/actuallyCodeAlex/babbletron-3000#readme",
   "devDependencies": {
     "ava": "5.2.0",
-    "copyfiles": "^2.4.1",
+    "copyfiles": "2.4.1",
     "typescript": "5.0.4"
   },
   "dependencies": {
