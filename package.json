@@ -5,7 +5,9 @@
   "private": "true",
   "main": "./dist/main.js",
   "scripts": {
-    "build": "npm run clean && tsc && npm run copy-files",
+    "build": "npm run clean && npm run build:main && npm run build:renderer && npm run copy-files",
+    "build:main": "tsc",
+    "build:renderer": "webpack",
     "clean": "rimraf ./dist",
     "copy-files": "copyfiles -u 1 public/**/* dist/",
     "start": "electron .",
@@ -22,11 +24,17 @@
   },
   "homepage": "https://github.com/actuallyCodeAlex/babbletron-3000#readme",
   "devDependencies": {
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
     "ava": "5.2.0",
     "copyfiles": "2.4.1",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "webpack-cli": "^5.1.1"
   },
   "dependencies": {
-    "electron": "24.3.1"
+    "electron": "24.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "^5.83.1"
   }
 }
