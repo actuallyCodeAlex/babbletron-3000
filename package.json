@@ -1,11 +1,14 @@
 {
-  "name": "my-webpack-project",
+  "name": "babbletron-3000",
   "version": "1.0.0",
-  "description": "My webpack project",
+  "description": "1 tool for creating and managing the babble of work.",
   "private": "true",
+  "main": "./dist/main.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node build/index.js",
+    "build": "npm run clean && tsc && npm run copy-files",
+    "clean": "rimraf ./dist",
+    "copy-files": "copyfiles -u 1 public/**/* dist/",
+    "start": "electron .",
     "test": "ava"
   },
   "repository": {
@@ -19,7 +22,11 @@
   },
   "homepage": "https://github.com/actuallyCodeAlex/babbletron-3000#readme",
   "devDependencies": {
-    "ava": "^5.2.0",
-    "typescript": "^5.0.4"
+    "ava": "5.2.0",
+    "copyfiles": "2.4.1",
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "electron": "24.3.1"
   }
 }
