@@ -1,16 +1,10 @@
 import * as ReactDOM from "react-dom/client";
-import somethingPath from './kitchen-sink.md';
-
-console.log({ somethingPath });
+import { KitchenSink } from "./markdown/kitchen-sink";
 
 const App = () => {
   return (
     <div>
-      <h1>babbletron-3000</h1>
-
-      <textarea id="markdown" />
-
-      <textarea id="html" />
+      <KitchenSink />
     </div>
   );
 };
