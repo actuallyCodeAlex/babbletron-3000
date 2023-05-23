@@ -1,4 +1,7 @@
 import * as ReactDOM from "react-dom/client";
+import somethingPath from './kitchen-sink.md';
+
+console.log({ somethingPath });
 
 const App = () => {
   return (
