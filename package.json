@@ -1,14 +1,16 @@
 {
   "name": "babbletron-3000",
+  "productName": "babbletron-3000",
   "version": "1.0.0",
   "description": "1 tool for creating and managing the babble of work.",
   "private": "true",
-  "main": "./dist/main.js",
+  "main": ".webpack/main",
   "scripts": {
-    "build": "npm run clean && tsc && npm run copy-files",
-    "clean": "rimraf ./dist",
-    "copy-files": "copyfiles -u 1 public/**/* dist/",
-    "start": "electron .",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx .",
     "test": "ava"
   },
   "repository": {
@@ -22,11 +24,36 @@
   },
   "homepage": "https://github.com/actuallyCodeAlex/babbletron-3000#readme",
   "devDependencies": {
+    "@electron-forge/cli": "6.1.1",
+    "@electron-forge/maker-deb": "6.1.1",
+    "@electron-forge/maker-rpm": "6.1.1",
+    "@electron-forge/maker-squirrel": "6.1.1",
+    "@electron-forge/maker-zip": "6.1.1",
+    "@electron-forge/plugin-webpack": "6.1.1",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@typescript-eslint/eslint-plugin": "5.59.7",
+    "@typescript-eslint/parser": "5.59.7",
+    "@vercel/webpack-asset-relocator-loader": "1.7.3",
     "ava": "5.2.0",
     "copyfiles": "2.4.1",
-    "typescript": "5.0.4"
+    "css-loader": "6.7.4",
+    "electron": "24.3.1",
+    "eslint": "8.41.0",
+    "eslint-plugin-import": "2.27.5",
+    "fork-ts-checker-webpack-plugin": "7.3.0",
+    "node-loader": "2.0.0",
+    "style-loader": "3.3.3",
+    "ts-loader": "9.4.2",
+    "ts-node": "10.9.1",
+    "typescript": "5.0.4",
+    "webpack-cli": "5.1.1"
   },
   "dependencies": {
-    "electron": "24.3.1"
+    "electron": "24.3.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "5.83.1"
   }
 }
