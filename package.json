@@ -1,17 +1,23 @@
 {
   "name": "babbletron-3000",
+  "productName": "my-app",
   "version": "1.0.0",
   "description": "1 tool for creating and managing the babble of work.",
   "private": "true",
-  "main": "./dist/main.js",
+  "main": ".webpack/main",
   "scripts": {
     "build": "npm run clean && npm run build:main && npm run build:renderer && npm run copy-files",
     "build:main": "tsc",
     "build:renderer": "webpack",
     "clean": "rimraf ./dist",
     "copy-files": "copyfiles -u 1 public/**/* dist/",
-    "start": "electron .",
-    "test": "ava"
+    "test": "ava",
+    "lol": "echo haha",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx ."
   },
   "repository": {
     "type": "git",
@@ -24,17 +30,36 @@
   },
   "homepage": "https://github.com/actuallyCodeAlex/babbletron-3000#readme",
   "devDependencies": {
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
     "ava": "5.2.0",
     "copyfiles": "2.4.1",
     "typescript": "5.0.4",
-    "webpack-cli": "^5.1.1"
+    "webpack-cli": "5.1.1",
+    "@electron-forge/cli": "6.1.1",
+    "@electron-forge/maker-deb": "6.1.1",
+    "@electron-forge/maker-rpm": "6.1.1",
+    "@electron-forge/maker-squirrel": "6.1.1",
+    "@electron-forge/maker-zip": "6.1.1",
+    "@electron-forge/plugin-webpack": "6.1.1",
+    "@typescript-eslint/eslint-plugin": "5.59.7",
+    "@typescript-eslint/parser": "5.59.7",
+    "@vercel/webpack-asset-relocator-loader": "1.7.3",
+    "css-loader": "6.7.4",
+    "electron": "24.3.1",
+    "eslint": "8.41.0",
+    "eslint-plugin-import": "2.27.5",
+    "fork-ts-checker-webpack-plugin": "7.3.0",
+    "node-loader": "2.0.0",
+    "style-loader": "3.3.3",
+    "ts-loader": "9.4.2",
+    "ts-node": "10.9.1"
   },
   "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
     "electron": "24.3.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "webpack": "^5.83.1"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "webpack": "5.83.1"
   }
 }
