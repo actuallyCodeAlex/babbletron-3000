@@ -1,7 +1,19 @@
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 
-function render() {
-  ReactDOM.render(<h2>Hello from React!</h2>, document.body);
-}
+const App = () => {
+  return (
+    <div>
+      <h1>babbletron-3000</h1>
+
+      <textarea id="markdown" />
+
+      <textarea id="html" />
+    </div>
+  );
+};
+
+const render = () => {
+  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+};
 
 render();
