@@ -43,6 +43,7 @@ A large collection of code samples which have been tested against GitHub's markd
 
 Header 2
 --------</code></pre>
+
 </td>
 <td>
 <h1>Header 1</h1>
@@ -213,6 +214,7 @@ Header 2
 ---
 
 ---------------------------------------</code></pre>
+
 </td>
 <td>
 <hr/>
@@ -243,6 +245,7 @@ Header 2
 This is [an example] [id] reference-style link.
 
 [id]: http://example.com "Optional Title"</code></pre>
+
 </td>
 <td>
 <p>This is <a href="http://example.com" title="Example">an example</a> link.</p>
@@ -265,6 +268,7 @@ _single underscores_
 **double asterisks**
 
 **double underscores**</td>
+
 <td>
 <p><em>single asterisks</em></p>
 <p><em>single underscores</em></p>
