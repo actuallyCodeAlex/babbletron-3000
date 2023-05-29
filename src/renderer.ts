@@ -72,10 +72,3 @@ fetch(URL)
   })
   .catch((err) => console.error(err));
 
-// 1. Make AUTH REQ to MIDDLEWARE
-const localAuthServerUrl = "http://localhost:8000/auth";
-fetch(localAuthServerUrl).then((res) => res.json())
-.then((response) => {
-  const { data } = response;
-  console.log(data);
-}).catch((error) => console.error(error))
