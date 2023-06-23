@@ -10,11 +10,9 @@ interface RepoListProps {
 export const RepoList: FC<RepoListProps> = (props: RepoListProps) => {
     const { repositories, setContent } = props;
 
-    return <div>
-        <ol>
-            {repositories.map((repository) => <RepoListItem key={repository.id} repository={repository} setContent={setContent} />)}
-        </ol>
-    </div>
+    return <ul className="list-group">
+        {repositories.map((repository) => <RepoListItem key={repository.id} repository={repository} setContent={setContent} />)}
+    </ul>
 }
 
 export default RepoList;

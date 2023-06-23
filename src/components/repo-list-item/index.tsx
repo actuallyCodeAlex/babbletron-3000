@@ -22,9 +22,7 @@ export const RepoListItem: FC<RepoListItemProps> = (props: RepoListItemProps) =>
     }
 
     return (
-        <li key={repository.id}>
-            <button onClick={handleClick} type="button">{repository.name}</button>
-        </li>
+        <button className="list-group-item list-group-item-action" key={repository.id} onClick={handleClick} type="button">{repository.name}</button>
     )
 }
 
