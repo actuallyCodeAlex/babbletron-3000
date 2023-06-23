@@ -34,41 +34,41 @@ console.log(
 
 import "./app";
 
-const PROJECT_ID = "2wj8k8pe";
-const DATASET = "production";
+// const PROJECT_ID = "2wj8k8pe";
+// const DATASET = "production";
 
-const QUERY = encodeURIComponent('*[_type == "project"]');
+// const QUERY = encodeURIComponent('*[_type == "project"]');
 
-// Compose the URL for your project's endpoint and add the query
-const URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
+// // Compose the URL for your project's endpoint and add the query
+// const URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
 
-// fetch the content
-fetch(URL)
-  .then((res) => res.json())
-  .then(({ result }) => {
-    // get the list element, and the first item
-    const list = document.querySelector("ul");
-    const firstListItem = document.querySelector("ul li");
+// // fetch the content
+// fetch(URL)
+//   .then((res) => res.json())
+//   .then(({ result }) => {
+//     // get the list element, and the first item
+//     const list = document.querySelector("ul");
+//     const firstListItem = document.querySelector("ul li");
 
-    if (result.length > 0) {
-      // remove the placeholder content
-      list.removeChild(firstListItem);
+//     if (result.length > 0) {
+//       // remove the placeholder content
+//       list.removeChild(firstListItem);
 
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      result.forEach((project: any) => {
-        // create a list element for each project
-        const listItem = document.createElement("li");
+//       // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//       result.forEach((project: any) => {
+//         // create a list element for each project
+//         const listItem = document.createElement("li");
 
-        // add the project name as the text content
-        listItem.textContent = project?.title;
+//         // add the project name as the text content
+//         listItem.textContent = project?.title;
 
-        // add the item to the list
-        list.appendChild(listItem);
-      });
-      const pre = document.querySelector("pre");
-      // add the raw data to the preformatted element
-      pre.textContent = JSON.stringify(result, null, 2);
-    }
-  })
-  .catch((err) => console.error(err));
+//         // add the item to the list
+//         list.appendChild(listItem);
+//       });
+//       const pre = document.querySelector("pre");
+//       // add the raw data to the preformatted element
+//       pre.textContent = JSON.stringify(result, null, 2);
+//     }
+//   })
+//   .catch((err) => console.error(err));
 
