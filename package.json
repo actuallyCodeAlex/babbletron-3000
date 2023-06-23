@@ -45,7 +45,6 @@
     "html-loader": "4.2.0",
     "markdown-loader": "8.0.0",
     "node-loader": "2.0.0",
-    "remark-html": "15.0.2",
     "style-loader": "3.3.3",
     "ts-loader": "9.4.2",
     "ts-node": "10.9.1",
@@ -54,9 +53,10 @@
   },
   "dependencies": {
     "electron": "24.3.1",
-    "electron-squirrel-startup": "^1.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "electron-squirrel-startup": "1.0.0",
+    "markdown-to-jsx": "7.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "webpack": "5.83.1"
   }
 }
