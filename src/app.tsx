@@ -15,13 +15,30 @@ const App = () => {
         console.log(response);
         setRepositories(response.repos);
       }).catch((error) => console.error(error))
-  }, [])
+  }, []);
+
   return (
-    <>
-      <h1>babbletron-3000</h1>
-      <RepoList repositories={repositories} setContent={setContent} />
-      <RepoDisplay content={content} />
-    </>
+    <div className="container">
+      <h1 className="mt-5 mb-5">babbletron-3000</h1>
+
+      <div className="row">
+        <div className="col-6">
+          <div className="card">
+            <div className="card-body">
+              <h2 className="card-title">Repositories</h2>
+              <RepoList repositories={repositories} setContent={setContent} />
+            </div>
+          </div>
+        </div>
+        <div className="col-6">
+          <div className="card">
+            <div className="card-body">
+              <RepoDisplay content={content} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

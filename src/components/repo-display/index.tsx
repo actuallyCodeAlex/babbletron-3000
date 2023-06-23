@@ -8,8 +8,12 @@ interface RepoDisplayProps {
 export const RepoDisplay: FC<RepoDisplayProps> = (props: RepoDisplayProps) => {
     const { content } = props;
 
+    console.log(content)
+
     return <div id="repo-display">
         {content && <Markdown>{content}</Markdown>}
+        {content === null && <p>Select a repository</p>}
+        {content === '' && <p>No readme file located in repository</p>}
     </div>
 }
 
