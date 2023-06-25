@@ -5,10 +5,36 @@ body {
 
 #root {
   /* align-items: center; */
+  /* background: #dddddd; */
   display: flex;
   height: 100vh;
 }
 
 img {
   max-width: -webkit-fill-available;
+}
+
+.full-height {
+  height: -webkit-fill-available;
+}
+
+.bg-tertiary {
+  background: #dddddd;
+}
+
+.bg-white {
+  background: #ffffff;
+}
+
+#nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 300px;
+}
+
+#content {
+  padding-left: 300px;
 }
